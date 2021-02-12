@@ -18,14 +18,18 @@ public class Customer {
     private String name;
 
     @Column
+    private String town;
+
+    @Column
     private int age;
 
     @OneToMany(mappedBy = "customer")
     @JsonIgnoreProperties({"customer"})
     private List<Booking> bookings;
 
-    public Customer(String name, int age) {
+    public Customer(String name, String town, int age) {
         this.name = name;
+        this.town = town;
         this.age = age;
         this.bookings = new ArrayList<>();
     }
@@ -51,6 +55,14 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
     }
 
     public int getAge() {

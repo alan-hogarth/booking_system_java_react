@@ -19,9 +19,9 @@ public class CourseTest {
     public void setUp() throws Exception {
         course = new Course("Java", "Edinburgh", 5);
 
-        customer1 = new Customer("Barry", 35);
-        customer2 = new Customer("Wendy", 25);
-        customer3 = new Customer("Freddy", 18);
+        customer1 = new Customer("Barry", "Edingurgh", 35);
+        customer2 = new Customer("Wendy", "Glasgow", 25);
+        customer3 = new Customer("Freddy", "Inverness", 18);
 
         booking1 = new Booking(course, customer1, "24/4");
         booking2 = new Booking(course, customer2, "25/4");
