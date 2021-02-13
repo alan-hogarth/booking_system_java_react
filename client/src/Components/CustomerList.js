@@ -1,9 +1,10 @@
+import Customer from "./Customer";
 
 const CustomerList = (({ customers }) => {
     
-    const custNodes = customers.map((current)=>{
+    const custNodes = customers.map((currentCustomer)=>{
         return(
-        <p>customer={current} key={current.id}</p>
+        <Customer customer={currentCustomer} key={currentCustomer.id}/>
         )
     });
 

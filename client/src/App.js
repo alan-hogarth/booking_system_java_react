@@ -9,13 +9,11 @@ function App() {
 
   const fetchCustomers = ()=> {
     
-    const customerUrl = `http:localhost:8080/customers`;
+    const customerUrl = `http://localhost:8080/customers`;
     
     fetch(customerUrl)
     .then((res)=>res.json())
-    .then((data)=>{
-        setCustomers(data);
-    })
+    .then((data)=>setCustomers(data))
   }
 
   useEffect(()=>{
@@ -26,7 +24,8 @@ function App() {
 
   return (
     <div className="App">
-      <CustomerList customers={customers.name}/>
+          <h3>Customer Details</h3>
+      <CustomerList customers={customers}/>
     </div>
   );
 }
